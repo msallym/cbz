@@ -1,0 +1,433 @@
+<!DOCTYPE html>  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>杭电传播系</title>
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+        }  
+        .main {
+  width: 100vw;
+  max-width: 1920px;
+  background: rgba(240, 247, 252, 0.82);
+}
+
+.main .header {
+  background-color: #0a5e9a;
+  height: 163px;
+}
+
+.main .header .logo {
+  left: 12px;
+  right: 1739px;
+  top: 26px;
+  bottom: 3135px;
+  position: absolute;
+  width: 169px;
+  height: 137px;
+  background: url(logo);
+}
+
+.main .header .title {
+  left: 195px;
+  right: 1475px;
+  top: 45px;
+  bottom: 3181px;
+  position: absolute;
+  width: 250px;
+  height: 72px;
+  color: #fffefe;
+  font-family: 思源宋体;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.main .header .search-bar {
+  left: 55%;
+  top: 65px;
+  position: absolute;
+  width: 437px;
+  height: 39.41px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.main .header .search-bar input {
+  margin: 5px 10px;
+  border: 0;
+  width: 382.38px;
+  height: 25px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: 思源黑体;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -1px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.main .header .search-bar .fangdajing {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.main .header .search-bar .fangdajing img {
+  width: 100%;
+}
+
+.main .header .login {
+  position: absolute;
+  left: 90%;
+  top: 65px;
+  width: 100px;
+  height: 37.39px;
+  background: linear-gradient(-45deg, #498ff2 0%, #4965f2 100%);
+  border-radius: 48px;
+}
+
+.main .header .login button {
+  border-radius: 48px;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: -1.05%;
+  position: absolute;
+  width: 100px;
+  height: 37.39px;
+  background: linear-gradient(-45deg, #498ff2 0%, #4965f2 100%);
+  border-radius: 48px;
+  border: 0;
+  color: #fff;
+}
+.main .header .login2 {
+  position: absolute;
+  left: 90%;
+  top: 65px;
+  width: 100px;
+  height: 50px;
+  display: grid;
+  place-items: top;
+}
+
+.main .header .login2 .button{
+  width: 100px;
+  height: 38px;
+  background-color: #000;
+  border-radius: 48px;
+  display: grid;
+  place-items: center;
+}
+
+.main .header .login2 .button:hover{
+  background-color: #fff;
+  border-radius: 48px;
+}
+
+.main .header .login2 .button:active{
+  background-color: #000000;
+  border-radius: 48px;
+}
+
+
+.link-3d {
+  /* font-family: 思源黑体;
+  font-size: 18px;
+  font-weight: 600; */
+
+  width: 100px;
+  height: 38px;
+  display: inline-block;
+  text-decoration: none;
+  color: #333333;
+  background-color: #f0f0f0;
+  /* padding: 10px 20px; */
+  border: 1px solid #ccc;
+  /* margin: 10px; */
+  transition: transform 0.3s, box-shadow 0.3s; /* 平滑过渡 */
+  border-radius: 48px;
+  display: grid;
+  place-items: center;
+}
+ 
+.link-3d:hover {
+  color: #498ff2;
+  transform: translateY(-5px) scale(1.05); /* 3D效果 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* 阴影增强立体感 */
+}
+.main .navs {
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-title{
+  text-decoration: none;
+  color: #000;
+}
+ 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+ 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+ 
+.dropdown-content a:hover {background-color: #f1f1f1;}
+ 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.main .navs .nav {
+  text-align: center;
+}
+
+.main .navs .nav .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+}
+
+.main .navs .nav .icon-down {
+  width: 8px;
+  height: 8px;
+  margin-left: 10px;
+}
+        header {  
+            background-color: #cedbe9;  
+            padding: 10px;  
+        }  
+        nav ul {  
+            list-style-type: none;  
+            margin: 0;  
+            padding: 0;  
+        }  
+        nav ul li {  
+            display: inline;  
+            margin-right: 10px;  
+        }  
+        .navbar {  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        background-color: #f8f9fa;  
+        padding: 10px;  
+    }  
+    .navbar a {  
+        display: inline-block;  
+        margin: 0 10px;  
+        text-decoration: none;  
+        color: #333;  
+        font-weight: bold;  
+        position: relative;  
+    }  
+    .navbar a::after {  
+        content: "→";  
+        position: absolute;  
+        right: -10px;  
+    }  
+    .navbar a:last-child::after {  
+        content: "";  
+    }  
+        .content {  
+            padding: 50px;  
+        }         
+        .text-box {  
+          font-size: larger;
+          width: 1300px;
+           height: 1000px;
+          background-color: #ffffff;  
+            border: 5px solid #034e7d;  
+            padding: 100px;  
+            margin-top: 30px;  
+        }  
+        .content {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.content {
+  position: relative;
+  display: inline-block;
+  padding-left: 50px;
+}
+a{
+  text-decoration: none;
+  color:#000
+}
+.content{
+  text-decoration: none;
+  color: #000;
+}
+ 
+    </style>  
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="title">杭电传播系</div>
+        <div class="search-bar">
+          <input id="search_bar" type="text" placeholder="请输入你需要搜索的内容" />
+          <div class="fangdajing" onclick="jumpToSearchPage()">
+            <img src="images/search.png" alt="" />
+          </div>
+          </div>
+          <script>
+            function jumpToSearchPage(){
+              var prompt_text1 = document.getElementById("search_bar").value
+                      
+            window.location.href = "搜索页.html?search="+prompt_text1
+            }
+            </script>
+       <div class="login2" id="login2button">
+        <a href="login_page.html" class="link-3d">登录</a>
+
+    </div>
+      <div class="login2" id="login2button">
+        <a href="登录页面.html" class="link-3d">登录</a>
+      </div>
+      <script>
+        function getQueryString(name) {
+          url_string = location;
+          url = new URL(url_string);
+          return url.searchParams.get(name);
+        }
+
+        if (getQueryString('user') == null || getQueryString('user') == "") {
+          document.getElementById("avatar").style.display = "none"
+          document.getElementById("login2button").style.display = "block"
+        }
+        else {
+          document.getElementById("login2button").style.display = "none"
+          document.getElementById("avatar").style.display = "block"
+        }
+
+      </script>
+      </div>
+
+      <ul>
+        <div class="navs">
+          <div class="nav"><img src="images/home.png" class="icon" />
+            <a class="dropdown-title" href="#">首页</a>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">传播系概况</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="传播系概况.html">专业简介</a>
+            <a href="实验室介绍.html">实验室介绍</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">人才培养</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="核心课程.html">核心课程</a>
+            <a href="培养目标.html">培养目标</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">师资队伍</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="总体师资概况.html">总体师资概况</a>
+            <a href="名师介绍.html">名师介绍</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">学生发展</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="学工动态.html">学工动态</a>
+            <a href="学科竞赛.html">学科竞赛</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">职业升学规划</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="历届情况.html">历年情况</a>
+            <a href="发展方向.html">发展方向</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">作品展示</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="大广赛.html">大广赛</a>
+            <a href="多媒体大赛.html">多媒体竞赛</a>
+            <a href="论文专利.html">论文专利</a>
+            <a href="其它作品展示.html">其它作品展示</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">报考指南</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="三位一体.html">三位一体</a>
+            <a href="普通招生介绍.html">普通招生介绍</a>
+          </div>
+        </div>
+        <div class="nav">
+          联系我们<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          个人中心<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        </div>
+        <div class="navbar">  
+            <a href="#">传播系概况</a>  
+            <a href="#">专业简介</a>  
+            <a href="#">页面3</a>  
+            <a href="#">页面4</a>  
+        </div>  
+      <div class="content">  
+        <div class="text-box">  
+          <h4>名师介绍</h4>
+          <p style=font-size:smaller>点击下方</p>
+            <p>
+          <a href="李金城.html">李金城</a><dr/>
+        </p>
+        <p>
+            <a href="王松.html">王松</a>     
+          </p>
+          <p><a href="刘合翔.html">刘合翔</a> </p>
+             
+        </div>  
+</div>  
+<footer>  
+    <button>收藏</button>  
+    <button>评论</button>  
+    <button>分享</button>  
+</footer>  
+</body>  
+</html>

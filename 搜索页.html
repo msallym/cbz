@@ -1,0 +1,459 @@
+<!DOCTYPE html>  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>杭电传播系</title>
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+        }  
+        .main {
+  width: 100vw;
+  max-width: 1920px;
+  background: rgba(240, 247, 252, 0.82);
+}
+
+.main .header {
+  background-color: #0a5e9a;
+  height: 163px;
+}
+
+.main .header .logo {
+  left: 12px;
+  right: 1739px;
+  top: 26px;
+  bottom: 3135px;
+  position: absolute;
+  width: 169px;
+  height: 137px;
+  background: url(logo);
+}
+
+.main .header .title {
+  left: 195px;
+  right: 1475px;
+  top: 45px;
+  bottom: 3181px;
+  position: absolute;
+  width: 250px;
+  height: 72px;
+  color: #fffefe;
+  font-family: 思源宋体;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.main .header .search-bar {
+  left: 55%;
+  top: 65px;
+  position: absolute;
+  width: 437px;
+  height: 39.41px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.main .header .search-bar input {
+  margin: 5px 10px;
+  border: 0;
+  width: 382.38px;
+  height: 25px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: 思源黑体;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -1px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.main .header .search-bar .fangdajing {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.main .header .search-bar .fangdajing img {
+  width: 100%;
+}
+
+.main .header .login {
+  position: absolute;
+  left: 90%;
+  top: 65px;
+  width: 100px;
+  height: 37.39px;
+  background: linear-gradient(-45deg, #498ff2 0%, #4965f2 100%);
+  border-radius: 48px;
+}
+
+.main .header .login button {
+  border-radius: 48px;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: -1.05%;
+  position: absolute;
+  width: 100px;
+  height: 37.39px;
+  background: linear-gradient(-45deg, #498ff2 0%, #4965f2 100%);
+  border-radius: 48px;
+  border: 0;
+  color: #fff;
+}
+
+.main .navs {
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+ 
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-title{
+  text-decoration: none;
+  color: #000;
+}
+ 
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+ 
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+ 
+.dropdown-content a:hover {background-color: #f1f1f1;}
+ 
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.main .navs .nav {
+  text-align: center;
+}
+
+.main .navs .nav .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+}
+
+.main .navs .nav .icon-down {
+  width: 8px;
+  height: 8px;
+  margin-left: 10px;
+}
+        header {  
+            background-color: #cedbe9;  
+            padding: 10px;  
+        }  
+        nav ul {  
+            list-style-type: none;  
+            margin: 0;  
+            padding: 0;  
+        }  
+        nav ul li {  
+            display: inline;  
+            margin-right: 10px;  
+        }  
+        .navbar {  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        background-color: #f8f9fa;  
+        padding: 10px;  
+    }  
+    .navbar a {  
+        display: inline-block;  
+        margin: 0 10px;  
+        text-decoration: none;  
+        color: #333;  
+        font-weight: bold;  
+        position: relative;  
+    }  
+    .navbar a::after {  
+        content: "→";  
+        position: absolute;  
+        right: -10px;  
+    }  
+    .navbar a:last-child::after {  
+        content: "";  
+    }  
+        .content {  
+            padding: 50px;  
+        }  
+        
+        .text-box {  
+          width: 1300px;
+           height: 1000px;
+          background-color: #ffffff;  
+            border: 5px solid #034e7d;  
+            padding: 100px;  
+            margin-top: 30px;  
+        }  
+    </style>  
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="title">杭电传播系</div>
+         <!-- 搜索栏 -->
+      <div class="search-bar">
+        <input id="search_bar" type="text" placeholder="请输入你需要搜索的内容" />
+        <div class="fangdajing" onclick="search_something_by_click()">
+          <img src="images/search.png" alt="" />
+        </div>
+        <script>
+          //函数作用是使用URL对象解析网址中所带的参数，若没有则显示登录按钮，若有则显示头像
+          function getQueryString(name) {
+            url_string = location;
+            url = new URL(url_string);
+            return url.searchParams.get(name);
+          }
+  
+        </script>
+
+        <script>
+          //测试用列表 两个列表中的项目一一对应
+          //这里放新闻标题
+          const searchables_list = [
+            "新闻",
+            "教师",
+            "大广赛",
+           ]
+          //这里放链接
+          const url_list = [
+            "传播系新闻.html",
+            "总体师资概况.html",
+            "大广赛.html",
+          ]
+          var score = 0
+          var sorted_obj = []
+          //获取文本框输入内容
+          var prompt_text1 = document.getElementById("search_bar").value
+          //获取url中search内容 
+          var prompt_text2 = getQueryString("search")
+          window.onload = function(){
+            search_something(prompt_text2)
+          }
+          
+
+          function search_something_by_click(){
+            prompt_text1 = document.getElementById("search_bar").value
+            search_something(prompt_text1)
+          }
+
+          function search_something(prompt_text) {
+            var score_list = []
+            //表示答案顺序，初始是[0,1,2,3,...]
+            //经过计算后得分最高的会排到第一位
+            var answer_order_list = []
+            
+            //遍历列表中每一个项目
+            for (i = 0; i < searchables_list.length; i++) {
+              //初始化答案排序
+              answer_order_list.push(i)
+              // alert(searchables_list[i])
+              score = 0
+              for (j = 0; j < searchables_list[i].length; j++) {
+                //列表中每一个项目拆分开来的字符 与
+                // 输入文本拆分开来的每个字符比较
+                //同一位置的字符是否完全一样
+                if (searchables_list[i][j] == prompt_text[j]) {
+                  //加分，分数越高越靠前
+                  score += 1
+                }
+                //不同位置是否包含这个字符
+                if (searchables_list[i].includes(prompt_text[j])) {
+                  score += 1
+                }
+                //不同位置是否包含整个搜索项
+                if (searchables_list[i].includes(prompt_text)) {
+                  score += 1
+                }
+              }
+
+              score_list.push(score)
+              // alert(searchables_list[i]+","+score)
+            }
+
+            // alert(score_list)
+
+            //两个数组合并为对象数组！searchables_list，score_list
+            let obj = {}
+            let obj_arr = []
+            for (i = 0; i < searchables_list.length; i++) {
+              obj["searchable"] = searchables_list[i]
+              obj["score"] = score_list[i]
+              obj["url"] = url_list[i]
+              //生成一个｛searchable = "?",score="?",url="?"｝的对象
+              //加入数组obj_arr
+              obj_arr.push(obj)
+              obj = {}
+            }
+
+            //sort的规则。。。。按照ASCII码来排序 1，12，2，31这样
+            //所以要进行改良
+            var sortby = function (arr, key) {
+              return arr.sort(function (a, b) {
+                let a1 = a[key];
+                let b1 = b[key];
+                return -(a1 - b1);
+              })
+
+            }
+            //生成排序后的对象
+            sorted_obj = sortby(obj_arr, "score")
+
+            // alert(sorted_obj[0]["searchable"])
+            filldiv()
+          }
+
+          function filldiv() {
+            for (i = 0; i < 3; i++) {
+              let id = "ans" + (i + 1)
+              let id_title = "ans" + (i + 1) + "_title"
+              let id_content = "ans" + (i + 1) + "_content"
+              document.getElementById(id_title).innerHTML = sorted_obj[i]["searchable"]
+              document.getElementById(id_content).innerHTML = sorted_obj[i]["url"]
+              document.getElementById(id).href = sorted_obj[i]["url"]
+  
+            }
+          }
+
+
+
+        </script>
+        </div>
+        
+      </div>
+
+      <ul>
+        <div class="navs">
+          <div class="nav"><img src="images/home.png" class="icon" />
+            <a class="dropdown-title" href="#">首页</a>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">传播系概况</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="传播系概况.html">专业简介</a>
+            <a href="实验室介绍.html">实验室介绍</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">人才培养</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="核心课程.html">核心课程</a>
+            <a href="培养目标.html">培养目标</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">师资队伍</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="总体师资概况.html">总体师资概况</a>
+            <a href="名师介绍.html">名师介绍</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">学生发展</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="学工动态.html">学工动态</a>
+            <a href="学科竞赛.html">学科竞赛</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">职业升学规划</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="历届情况.html">历年情况</a>
+            <a href="发展方向.html">发展方向</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">作品展示</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="大广赛.html">大广赛</a>
+            <a href="多媒体大赛.html">多媒体竞赛</a>
+            <a href="论文专利.html">论文专利</a>
+            <a href="其它作品展示.html">其它作品展示</a>
+          </div>
+        </div>
+        <div class="nav dropdown">
+          <a class="dropdown-title" href="#">报考指南</a><img src="images/down.png" class="icon-down" alt="" />
+          <div class="dropdown-content">
+            <a href="三位一体.html">三位一体</a>
+            <a href="普通招生介绍.html">普通招生介绍</a>
+          </div>
+        </div>
+        <div class="nav">
+          联系我们<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          个人中心<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        </div>
+        <div class="navbar">  
+            <a href="#">传播系概况</a>  
+            <a href="#">专业简介</a>  
+            <a href="#">页面3</a>  
+            <a href="#">页面4</a>  
+        </div>  
+      <div class="content">  
+        <div class="text-box">  
+                <div >
+                  <a class="search_result" id="ans1">
+                    <h1 id="ans1_title"></h1>
+                    <div id="ans1_content"></div>
+                  </a>
+                </div>
+                <div >
+                  <a class="search_result" id="ans2">
+                    <h1 id="ans2_title"></h1>
+                    <div id="ans2_content"></div>
+                  </a>
+                </div>
+                <div>
+                  <a class="search_result" id="ans3">
+                    <h1 id="ans3_title"></h1>
+                    <div id="ans3_content"></div>
+                  </a>
+                </div>
+        </div>  
+</div>  
+<footer>  
+    <button>收藏</button>  
+    <button>评论</button>  
+    <button>分享</button>  
+</footer>  
+</body>  
+</html>

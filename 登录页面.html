@@ -1,0 +1,106 @@
+<!DOCTYPE html>  
+<html lang="zh-CN">  
+<head>  
+    <meta charset="UTF-8">  
+    <title>登录页面</title>  
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+            background-color: rgb(240, 246, 252);  
+            margin: 0;  
+            padding: 20px;  
+        }  
+        .main .header .logo {
+            left: 550px;
+            right: 1739px;
+            top: 26px;
+            bottom: 3135px;
+            position: center;
+            padding-left: 500px;
+            width: 14px;
+            height: 14px;
+            margin-right: 10px;
+            background: url(logo);
+        }
+
+        h2 {  
+            color: #333;  
+            text-align: center;  
+        }  
+  
+        form {  
+            background-color: #fff;  
+            border-radius: 10px;  
+            padding: 20px;  
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);  
+            max-width: 400px;  
+            margin: 0 auto;  
+        }  
+  
+        label, input[type="text"], input[type="submit"] {  
+            display: block;  
+            width: 100%;  
+            margin-bottom: 10px;  
+        }  
+  
+        input[type="text"] {  
+            padding: 10px;  
+            border-radius: 5px;  
+            border: 1px solid #ccc;  
+        }  
+  
+        input[type="submit"] {  
+            background-color: #4CAF50;  
+            color: white;  
+            border: none;  
+            cursor: pointer;  
+        }  
+  
+        input[type="submit"]:hover {  
+            background-color: #45a049;  
+        }  
+  
+        input[type="checkbox"] {  
+            margin-right: 5px;  
+        }  
+    </style>  
+</head>  
+<body>
+    <div class="main">
+        <div class="header">
+          <div class="logo" style="width: 80%;height:80%;">
+            <img src="images/logo.png" alt="" />
+          </div>
+    <h2>杭电传播系</h2>  
+    <form name="user_form">
+        <div>  
+            <label for="name">姓名:</label>  
+            <input type="text" id="name" name="name" placeholder="请输入姓名" required>  
+        </div>  
+        <div>  
+            <div class="login_form_format">
+                <div class="login_prompt_format">
+            <label for="student_id">学号:</label>  
+            <input type="text" id="student_id" name="student_id" placeholder="请输入学号" required>  
+        </div>  
+        <div>  
+            <div class="login_form_format">
+                <div class="login_prompt_format">
+            <label for="contact">密码:</label>  
+            <input type="text" id="contact" name="contact" placeholder="请输入联系方式" required>  
+        </div>  
+        <div>  
+            <input type="checkbox" id="agreement" name="agreement">  
+            <label for="agreement">已阅读所知事项</label>  
+        </div>  
+        <div>  
+             <input type="submit" value="登录" class="link-3d" onclick="getFormAndJump()">
+                <script>
+                    function getFormAndJump() {
+                        document.user_form.action = "index.html"
+                    }
+                </script>
+        </div>  
+    </form>  
+</body>  
+</html>

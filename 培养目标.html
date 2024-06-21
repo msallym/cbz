@@ -1,0 +1,265 @@
+<!DOCTYPE html>  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>杭电传播系</title>
+    <style>  
+        body {  
+            font-family: Arial, sans-serif;  
+        }  
+        .main {
+  width: 100vw;
+  max-width: 1920px;
+  background: rgba(240, 247, 252, 0.82);
+}
+
+.main .header {
+  background-color: #0a5e9a;
+  height: 163px;
+}
+
+.main .header .logo {
+  left: 12px;
+  right: 1739px;
+  top: 26px;
+  bottom: 3135px;
+  position: absolute;
+  width: 169px;
+  height: 137px;
+  background: url(logo);
+}
+
+.main .header .title {
+  left: 195px;
+  right: 1475px;
+  top: 45px;
+  bottom: 3181px;
+  position: absolute;
+  width: 250px;
+  height: 72px;
+  color: #fffefe;
+  font-family: 思源宋体;
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 72px;
+  letter-spacing: 0px;
+  text-align: left;
+}
+
+.main .header .search-bar {
+  left: 55%;
+  top: 65px;
+  position: absolute;
+  width: 437px;
+  height: 39.41px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid gainsboro;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+
+.main .header .search-bar input {
+  margin: 5px 10px;
+  border: 0;
+  width: 382.38px;
+  height: 25px;
+  color: rgba(0, 0, 0, 0.4);
+  font-family: 思源黑体;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: -1px;
+  text-align: left;
+  border-radius: 5px;
+}
+
+.main .header .search-bar .fangdajing {
+  position: absolute;
+  right: 5px;
+  top: 7px;
+  border: 0;
+  width: 25px;
+  height: 25px;
+}
+
+.main .header .search-bar .fangdajing img {
+  width: 100%;
+}
+
+.main .header .login {
+  position: absolute;
+  left: 90%;
+  top: 65px;
+  width: 100px;
+  height: 37.39px;
+  background: linear-gradient(-45deg, #498ff2 0%, #4965f2 100%);
+  border-radius: 48px;
+}
+
+.main .header .login button {
+  border-radius: 48px;
+  left: 0%;
+  right: 0%;
+  top: 0%;
+  bottom: -1.05%;
+  position: absolute;
+  width: 100px;
+  height: 37.39px;
+  background: linear-gradient(-45deg, #498ff2 0%, #4965f2 100%);
+  border-radius: 48px;
+  border: 0;
+  color: #fff;
+}
+
+.main .navs {
+  height: 60px;
+  line-height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #fff;
+}
+
+.main .navs .nav {
+  text-align: center;
+}
+
+.main .navs .nav .icon {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+}
+
+.main .navs .nav .icon-down {
+  width: 8px;
+  height: 8px;
+  margin-left: 10px;
+}
+        header {  
+            background-color: #cedbe9;  
+            padding: 10px;  
+        }  
+        nav ul {  
+            list-style-type: none;  
+            margin: 0;  
+            padding: 0;  
+        }  
+        nav ul li {  
+            display: inline;  
+            margin-right: 10px;  
+        }  
+        .navbar {  
+        display: flex;  
+        justify-content: center;  
+        align-items: center;  
+        background-color: #f8f9fa;  
+        padding: 10px;  
+    }  
+    .navbar a {  
+        display: inline-block;  
+        margin: 0 10px;  
+        text-decoration: none;  
+        color: #333;  
+        font-weight: bold;  
+        position: relative;  
+    }  
+    .navbar a::after {  
+        content: "→";  
+        position: absolute;  
+        right: -10px;  
+    }  
+    .navbar a:last-child::after {  
+        content: "";  
+    }  
+        .content {  
+            padding: 50px;  
+        }  
+        
+        .text-box {  
+          width: 1300px;
+           height: 1000px;
+          background-color: #ffffff;  
+            border: 5px solid #034e7d;  
+            padding: 100px;  
+            margin-top: 30px;  
+        }  
+    </style>  
+  </head>
+  <body>
+    <div class="main">
+      <div class="header">
+        <div class="logo">
+          <img src="images/logo.png" alt="" />
+        </div>
+        <div class="title">杭电传播系</div>
+        <div class="search-bar">
+          <input type="text" placeholder="请输入你需要搜索的内容" />
+          <div class="fangdajing">
+            <img src="images/search.png" alt="" />
+          </div>
+        </div>
+        <div class="login">
+          <button type="button">登录</button>
+        </div>
+      </div>
+
+      <div class="navs">
+        <div class="nav"><img src="images/home.png" class="icon" />首页</div>
+        <div class="nav">
+          学生发展<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          传播系概况<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          人才培养<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          师资队伍<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          职业规划<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          作品展示<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          报考指南<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          联系我们<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        <div class="nav">
+          个人中心<img src="images/down.png" class="icon-down" alt="" />
+        </div>
+        </div>
+        <div class="navbar">  
+            <a href="#">传播系概况</a>  
+            <a href="#">专业简介</a>  
+            <a href="#">页面3</a>  
+            <a href="#">页面4</a>  
+        </div>  
+      <div class="content">  
+        <div class="text-box">  
+            <h3>培养目标</h3>
+            <p>
+            面向媒体工作的三个维度:内容、经营和技术，培养具备“内容编创、视觉表现、运营推广与文化赋能"能力的“媒体人、创作人、经纪人、策展人。
+            </p> 
+            <h3>个人发展方向(内容/经营/技术)</h3>    
+            <p>
+            媒体人、创作人、经纪人、策展人…
+            </p>  
+            <h3>素质目标</h3> 
+            <p>责任感、创新力、沟通力、执行力</p>
+            <h3>技能目标</h3>
+            <p>内容编创、视觉表现、运营推广、文化赋能</p>
+            <h4>服务品牌、打造品牌、成为品牌!</h4>
+        </div>  
+</div>  
+<footer>  
+    <button>收藏</button>  
+    <button>评论</button>  
+    <button>分享</button>  
+</footer>  
+</body>  
+</html>
